@@ -106,7 +106,7 @@ y_predict = slr_model.predict(X)
 print("Real Values-->\n", y[0: 10])
 print("Predictions-->\n", y_predict[0: 10])
 
-print("Bias (b)-->", slr_model.intercept_[0][0])
+print("Bias (b)-->", slr_model.intercept_[0])
 print("Weight (w)-->", slr_model.coef_[0][0])
 
 # Prediction
@@ -144,4 +144,4 @@ print(plt.show())
 print("MSE-->", mean_squared_error(y_predict, y))
 print("RMSE-->", np.sqrt(mean_squared_error(y_predict, y)))
 print("MAE-->", mean_absolute_error(y_predict, y))
-print("F1_SCORE (R Square) -->", slr_model.score(X, y))
+print("F1_SCORE-->", slr_model.score(X, y))
